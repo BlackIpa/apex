@@ -8,10 +8,10 @@
         <version>3.2.5</version>
     </parent>
     <groupId>com</groupId>
-    <artifactId>football</artifactId>
+    <artifactId>apex</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>football</name>
-    <description>football</description>
+    <name>apex</name>
+    <description>apex</description>
     <url/>
     <licenses>
         <license/>

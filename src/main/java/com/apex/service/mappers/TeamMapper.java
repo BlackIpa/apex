@@ -1,7 +1,7 @@
-package com.football.service.mappers;
+package com.apex.service.mappers;
 
-import com.football.dto.TeamDto;
-import com.football.repository.dao.Team;
+import com.apex.dto.TeamDto;
+import com.apex.repository.dao.Team;
 import org.mapstruct.Mapper;
 
 import static org.mapstruct.MappingConstants.ComponentModel.SPRING;

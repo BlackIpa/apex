@@ -1,6 +1,6 @@
-package com.football.service.api;
+package com.apex.service.api;
 
-import com.football.dto.TeamDto;
+import com.apex.dto.TeamDto;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
