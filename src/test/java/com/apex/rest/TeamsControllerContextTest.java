@@ -1,8 +1,9 @@
-package com.football.rest;
+package com.apex.rest;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.football.dto.TeamDto;
-import com.football.service.api.TeamService;
+import com.apex.dto.TeamDto;
+import com.apex.enums.Region;
+import com.apex.service.api.TeamService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -31,6 +32,8 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @ExtendWith(MockitoExtension.class)
 class TeamsControllerContextTest {
 
+	private static final String TEAM_NAME = "SJP2";
+
 	private static final ObjectMapper OBJECT_MAPPER = new ObjectMapper();
 
 	private MockMvc mockMvc;
@@ -53,7 +56,7 @@ class TeamsControllerContextTest {
 	void shouldReturnTeamById() throws Exception {
 		// given
 		Long id = 1L;
-		TeamDto dto = new TeamDto("Arsenal", "Emirates", 60000);
+		TeamDto dto = new TeamDto(TEAM_NAME, Region.EMEA);
 		when(teamService.read(id)).thenReturn(dto);
 
 		// when
@@ -69,7 +72,7 @@ class TeamsControllerContextTest {
 	@Test
 	void shouldReturnPagedTeams() throws Exception {
 		// given
-		TeamDto dto = new TeamDto("Arsenal", "Emirates", 60000);
+		TeamDto dto = new TeamDto(TEAM_NAME, Region.EMEA);
 		Pageable pageable = PageRequest.of(0, 10);
 		Page<TeamDto> teamPage = new PageImpl<>(List.of(dto), pageable, 1);
 		when(teamService.readAll(any(Pageable.class))).thenReturn(teamPage);

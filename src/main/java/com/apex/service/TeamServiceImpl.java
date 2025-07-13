@@ -1,9 +1,9 @@
-package com.football.service;
+package com.apex.service;
 
-import com.football.dto.TeamDto;
-import com.football.repository.TeamRepository;
-import com.football.service.api.TeamService;
-import com.football.service.mappers.TeamMapper;
+import com.apex.dto.TeamDto;
+import com.apex.repository.TeamRepository;
+import com.apex.service.api.TeamService;
+import com.apex.service.mappers.TeamMapper;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;

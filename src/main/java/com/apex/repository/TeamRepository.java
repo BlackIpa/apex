@@ -1,6 +1,6 @@
-package com.football.repository;
+package com.apex.repository;
 
-import com.football.repository.dao.Team;
+import com.apex.repository.dao.Team;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,7 +1,7 @@
-package com.football.rest;
+package com.apex.rest;
 
-import com.football.dto.TeamDto;
-import com.football.service.api.TeamService;
+import com.apex.dto.TeamDto;
+import com.apex.service.api.TeamService;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;

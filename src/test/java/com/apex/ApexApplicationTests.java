@@ -1,10 +1,10 @@
-package com.football;
+package com.apex;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class FootballApplicationTests {
+class ApexApplicationTests {
 
 	@Test
 	void contextLoads() {
