@@ -1,0 +1,36 @@
+services:
+
+  db:
+    image: postgres:alpine
+    container_name: apex-postgres
+    restart: always
+    environment:
+      POSTGRES_DB: apexdb
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - apex-network
+
+  app:
+    build: .
+    container_name: apex-app
+    ports:
+      - "8080:8080"
+    environment:
+      DB_USERNAME: postgres
+      DB_PASSWORD: postgres
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/apexdb
+    depends_on:
+      - db
+    networks:
+      - apex-network
+
+volumes:
+  postgres_data:
+
+networks:
+  apex-network:
